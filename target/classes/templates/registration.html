@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<title>Spring Security Example </title>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav class="navbar navbar-expand-lg navbar-dark mb-2" style="background-color: #180b7a">
+    <style>
+        .material-icons{
+            display: inline-flex;
+            vertical-align: top;
+        }
+    </style>
+    <a class="navbar-brand">
+
+        Social.com
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-pills ml-auto mr-5">
+            <li class="nav-item mr-5">
+                <a class="nav-link text-light" th:href="@{/registration}">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    Register
+                </a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link text-light" th:href="@{/login}">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+                        <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+                        <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+                    </svg>
+                    Login
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="text-center d-flex justify-content-md-center align-items-center vh-100">
+<div>
+<p th:text="${error}"></p>
+<form th:action="@{/registration}" method="post">
+    <h1 class="h3 mb-3 font-weight-normal">Add new user</h1>
+    <div class="form-group"><label> Email : <input type="email" class="form-control" name="username" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/> </label></div>
+    <div class="form-group"><label> Full Name : <input type="text" class="form-control" name="fullName" required pattern="^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$"/> </label></div>
+    <div class="form-group"><label> Birth date : <input type="date" class="form-control" name="birthDate" required/> </label></div>
+    <div class="form-group"><label> Picture Url : <input type="url" class="form-control" name="pictureUrl" required pattern="https?://.+" title="Include http://"/> </label></div>
+    <div class="form-group"><label> Password: <input type="password" class="form-control" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/> </label></div>
+    <input type="submit" class="btn btn-primary" value="Registration"/>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[1023/111757.228:ERROR:directory_reader_win.cc(43)] FindFirstFile: —истеме не удаетс€ найти указанный путь. (0x3)
+[1023/113855.958:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\amanbay\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\fcb82ca7-e8a9-4a5b-8841-d67928679a49: —истеме не удаетс€ найти указанный путь. (0x3)
+[1023/113859.339:ERROR:process_info.cc(359)] UncheckedAllocate
+[1023/133107.170:ERROR:process_info.cc(359)] UncheckedAllocate
+[1023/133107.170:ERROR:process_info.cc(359)] UncheckedAllocate
+[1023/133107.170:ERROR:process_info.cc(359)] UncheckedAllocate
+[1023/133107.191:ERROR:process_info.cc(359)] UncheckedAllocate
+[1023/133107.232:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\amanbay\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bb85b42a-f23e-4aa6-84ee-0fd2907e7e73: —истеме не удаетс€ найти указанный путь. (0x3)
+[1023/133107.571:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffc3a4f50e4 of 512 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[1023/133107.571:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffc7c657a7c of 512 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[1023/133107.571:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffc7f41a850 of 512 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[1023/133107.571:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ffc7f4746cb of 512 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
